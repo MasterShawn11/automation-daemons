@@ -1,0 +1,19 @@
+# secrets / env
+.env
+*.pem
+*.key
+*.p12
+*.pfx
+# logs (ignored by default; commit only sanitized artifacts) 
+lab-logs/*
+!lab-logs/.keep
+
+# artifacts (keep folder; commit sanitized excerpts intentionally) 
+artifacts/*
+!artifacts/.keep
+
+#OS/edito cruft 
+.DS_Store
+.vscode/
+.idea/
+*.swp
