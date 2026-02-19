@@ -23,19 +23,24 @@ related:
 - Configured program to run as on boot system service for quick actioning 
 
 ## Troubleshooting Log
-- **Symptom:**
-- **Hypothesis:**
-- **Test:**
-- **Result:**
-- **Fix:**
+- **Symptom:** Enrich_notes.py script hiccup around line 145 
+- **Hypothesis:** I used tabs instead of spaces so my spacing was creating wonky loop mishaps 
+- **Test:** I ran the cmd below, identified the problem areas in the line, then re ran the script with a compiler to confirm ok 
+- **Result:** 'compile ok'
+- **Fix:** python3 -m py_compile ~/workspace/automation/enrich_notes.py && echo "compile ok"
+
 
 ## Commands / Evidence
 ```bash
-# paste key commands here
+# python3 ~/workspace/automation/enrich_notes.py
+# nl -ba ~/workspace/automation/enrich_notes.py | sed -n '97,142p'
+# python3 -m py_compile ~/workspace/automation/enrich_notes.py && echo "compile ok"
+  ... ~/workspace/automation/enrich_notes.py", line 141
+
 ```
 
 ## Security Notes
--
+- NSTR
 
 ## Next Actions
 - [Further expand cognitive taxonomy and classification ] 
